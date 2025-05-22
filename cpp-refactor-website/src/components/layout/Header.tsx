@@ -15,8 +15,7 @@ export default function Header() {
           <Link href="/smells" className={buttonVariants({ variant: "ghost" })}>
             Code Smells
           </Link>
-          {/* Linking to the first quiz as a placeholder for a quiz index page */}
-          <Link href="/quizzes/long-method-quiz-1" className={buttonVariants({ variant: "ghost" })}>
+          <Link href="/quizzes" className={buttonVariants({ variant: "ghost" })}>
             Quizzes
           </Link>
         </div>

@@ -17,7 +17,7 @@ export default function HomePage() {
           <Link href="/smells" passHref>
             <Button size="lg" className="w-full sm:w-auto">Explore Code Smells</Button>
           </Link>
-          <Link href="/quizzes/long-method-quiz-1" passHref> {/* Link to first quiz */}
+          <Link href="/quizzes" passHref>
             <Button size="lg" variant="outline" className="w-full sm:w-auto">Test Your Knowledge</Button>
           </Link>
         </CardContent>

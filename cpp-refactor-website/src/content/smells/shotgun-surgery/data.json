@@ -1,0 +1,25 @@
+{
+  "id": "shotgun-surgery",
+  "name": "Shotgun Surgery",
+  "description": "A change to one part of the system requires many small changes to many different classes. This occurs when a single responsibility has been split across multiple classes.",
+  "cppExamples": [],
+  "refactoringTechniques": [
+    {
+      "name": "Move Method",
+      "description": "Consolidate related behaviors that are spread across multiple classes into a single class."
+    },
+    {
+      "name": "Move Field",
+      "description": "Relocate data that's accessed by multiple classes to a centralized location."
+    },
+    {
+      "name": "Extract Class",
+      "description": "Create a new class that encapsulates the common behavior currently spread across multiple classes."
+    },
+    {
+      "name": "Inline Class",
+      "description": "Merge classes that have been broken apart unnecessarily."
+    }
+  ],
+  "relatedSmells": ["divergent-change", "feature-envy", "data-clumps"]
+}

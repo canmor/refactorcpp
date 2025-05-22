@@ -1,0 +1,19 @@
+{
+  "id": "shotgun-surgery-quiz-1",
+  "smellId": "shotgun-surgery",
+  "title": "Identifying Code Smells in Customer Loyalty System",
+  "question": "Review the C++ code snippet below. Which code smell is most prominently exhibited in how the loyalty tier calculation is implemented across multiple classes?",
+  "codeSnippet": {
+    "path": "quizzes/shotgun-surgery-quiz-1/snippet.cpp",
+    "language": "cpp"
+  },
+  "quizType": "multiple-choice",
+  "options": [
+    { "id": "a", "text": "Feature Envy" },
+    { "id": "b", "text": "Shotgun Surgery" },
+    { "id": "c", "text": "Divergent Change" },
+    { "id": "d", "text": "Data Clumps" }
+  ],
+  "correctAnswer": "b",
+  "explanation": "This code exhibits the 'Shotgun Surgery' code smell. The loyalty tier thresholds (500 for Silver, 1000 for Gold, 5000 for Platinum) are duplicated across several classes: EmailService, AnalyticsService, CustomerSupportService, and MarketingService. If these thresholds need to change, modifications would be required in all these classes simultaneously. This is the hallmark of Shotgun Surgery - a single conceptual change requires changes to multiple classes. To fix this, the tier calculation logic should be centralized in one location, perhaps in the Customer class or in a dedicated LoyaltyTierService, so that changes to tier thresholds only need to be made in one place."
+}

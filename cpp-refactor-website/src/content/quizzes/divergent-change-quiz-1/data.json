@@ -1,0 +1,19 @@
+{
+  "id": "divergent-change-quiz-1",
+  "smellId": "divergent-change",
+  "title": "Identifying Code Smells in Order Management System",
+  "question": "Review the C++ code snippet below. Which code smell is most prominently exhibited in the OrderManager class?",
+  "codeSnippet": {
+    "path": "quizzes/divergent-change-quiz-1/snippet.cpp",
+    "language": "cpp"
+  },
+  "quizType": "multiple-choice",
+  "options": [
+    { "id": "a", "text": "Divergent Change" },
+    { "id": "b", "text": "Shotgun Surgery" },
+    { "id": "c", "text": "Feature Envy" },
+    { "id": "d", "text": "Data Class" }
+  ],
+  "correctAnswer": "a",
+  "explanation": "This code exhibits the 'Divergent Change' code smell. The OrderManager class is responsible for many unrelated concerns including order processing, payment handling, shipping management, customer management, and inventory control. When changes are needed to any one of these areas, the OrderManager class must be modified. For example, adding a new payment method would require changes to multiple methods in this class. Divergent Change occurs when a single class needs to be changed for different reasons or types of changes. This violates the Single Responsibility Principle and makes the code harder to maintain. To fix this smell, the class should be split into separate, focused classes, each with a single responsibility."
+}

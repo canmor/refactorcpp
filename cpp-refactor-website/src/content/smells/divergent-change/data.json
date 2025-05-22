@@ -1,0 +1,25 @@
+{
+  "id": "divergent-change",
+  "name": "Divergent Change",
+  "description": "A class that needs to be modified in different ways for different reasons. When you make changes to a class, you find yourself changing many unrelated methods.",
+  "cppExamples": [],
+  "refactoringTechniques": [
+    {
+      "name": "Extract Class",
+      "description": "Split the class into multiple classes, each handling a single area of responsibility."
+    },
+    {
+      "name": "Move Method",
+      "description": "Move related methods to their own focused class."
+    },
+    {
+      "name": "Extract Module or Component",
+      "description": "Extract cohesive subsystems into separate modules or components."
+    },
+    {
+      "name": "Apply Single Responsibility Principle",
+      "description": "Ensure each class has only one reason to change."
+    }
+  ],
+  "relatedSmells": ["shotgun-surgery", "large-class", "god-object"]
+}

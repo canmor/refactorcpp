@@ -1,6 +1,6 @@
 import fs from 'fs';
 import path from 'path';
-import { getHighlighter } from 'shiki';
+import * as shiki from 'shiki';
 
 interface QuizCodeSnippet {
   path: string; // Relative path like "quizzes/long-method-quiz-1/snippet.cpp"
@@ -25,11 +25,11 @@ export interface QuizData {
   explanation: string;
 }
 
-let highlighter: Awaited<ReturnType<typeof getHighlighter>>;
+let highlighter: shiki.Highlighter;
 
 async function getShikiHighlighter() {
   if (!highlighter) {
-    highlighter = await getHighlighter({
+    highlighter = await shiki.createHighlighter({
       themes: ['github-dark'], // Or your preferred theme
       langs: ['cpp', 'c', 'json', 'bash']
     });

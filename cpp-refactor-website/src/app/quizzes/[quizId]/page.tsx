@@ -15,7 +15,9 @@ interface QuizPageProps {
 }
 
 export default async function QuizPage({ params }: QuizPageProps) {
-  const quiz: QuizData | null = await getQuizData(params.quizId);
+  // Make sure to await params before accessing its properties
+  const { quizId } = await params;
+  const quiz: QuizData | null = await getQuizData(quizId);
 
   if (!quiz) {
     notFound();

@@ -3,7 +3,7 @@ import path from 'path';
 import { notFound } from 'next/navigation';
 import { Card, CardHeader, CardTitle, CardDescription, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
-import { getHighlighter, bundledLanguages } from 'shiki'; // Or import from prism-react-renderer
+import * as shiki from 'shiki';
 
 // Define the structure of a code smell based on your data.json
 interface CodeExample {
@@ -45,7 +45,7 @@ async function getSmellData(smellId: string): Promise<CodeSmellData | null> {
   const data = JSON.parse(fileContents) as CodeSmellData;
 
   // Initialize shiki highlighter
-  const highlighter = await getHighlighter({
+  const highlighter = await shiki.createHighlighter({
     themes: ['github-dark'], // Or your preferred theme
     langs: ['cpp', 'c', 'json', 'bash'] // Include languages you need
   });
@@ -64,7 +64,9 @@ async function getSmellData(smellId: string): Promise<CodeSmellData | null> {
 }
 
 export default async function SmellDetailPage({ params }: { params: { smellId: string } }) {
-  const smell = await getSmellData(params.smellId);
+  // Make sure to await params before accessing its properties
+  const { smellId } = await params;
+  const smell = await getSmellData(smellId);
 
   if (!smell) {
     notFound();

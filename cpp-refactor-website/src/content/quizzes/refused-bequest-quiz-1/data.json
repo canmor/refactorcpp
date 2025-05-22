@@ -1,0 +1,19 @@
+{
+  "id": "refused-bequest-quiz-1",
+  "smellId": "refused-bequest",
+  "title": "Identifying Code Smells in Vehicle Inheritance",
+  "question": "Review the C++ code snippet below. Which code smell is most prominently exhibited in the inheritance relationship?",
+  "codeSnippet": {
+    "path": "quizzes/refused-bequest-quiz-1/snippet.cpp",
+    "language": "cpp"
+  },
+  "quizType": "multiple-choice",
+  "options": [
+    { "id": "a", "text": "Refused Bequest" },
+    { "id": "b", "text": "Feature Envy" },
+    { "id": "c", "text": "Inappropriate Intimacy" },
+    { "id": "d", "text": "Divergent Change" }
+  ],
+  "correctAnswer": "a",
+  "explanation": "This code exhibits the 'Refused Bequest' code smell. The ElectricBicycle class inherits from Vehicle but doesn't appropriately use all the inherited functionality. It overrides methods like 'refuel' and 'checkFluids' just to throw exceptions, indicating these methods don't apply to electric bicycles. This shows that the inheritance hierarchy is forced and inappropriate. When a subclass rejects or doesn't properly use functionality inherited from its parent, it suggests that the inheritance relationship may not be the right design choice. A better solution would be to refactor the code using composition instead of inheritance, or restructuring the class hierarchy with a common interface that only includes methods applicable to all subclasses."
+}

@@ -1,0 +1,19 @@
+{
+  "id": "temporary-field-quiz-1",
+  "smellId": "temporary-field",
+  "title": "Identifying Code Smells in Financial Reporting",
+  "question": "Review the C++ code snippet below. Which code smell is most prominently exhibited in this FinancialReport class?",
+  "codeSnippet": {
+    "path": "quizzes/temporary-field-quiz-1/snippet.cpp",
+    "language": "cpp"
+  },
+  "quizType": "multiple-choice",
+  "options": [
+    { "id": "a", "text": "Divergent Change" },
+    { "id": "b", "text": "Shotgun Surgery" },
+    { "id": "c", "text": "Temporary Field" },
+    { "id": "d", "text": "Inappropriate Intimacy" }
+  ],
+  "correctAnswer": "c",
+  "explanation": "The FinancialReport class exhibits the 'Temporary Field' code smell. It contains several member variables (depreciationRate, taxableAssets, overseasIncome, etc.) that are only used and initialized during the calculateTaxes() method, and others (departmentNames, departmentExpenses, etc.) that are only used during generateAnnualReport(). These fields remain empty or unused outside of these specific methods. This makes the code harder to understand and maintain because the fields seem to be part of the class's state, but they're actually only meaningful in certain contexts. A better design would extract these methods and their related temporary fields into separate classes (such as TaxCalculator and AnnualReportGenerator) that manage their own state properly."
+}

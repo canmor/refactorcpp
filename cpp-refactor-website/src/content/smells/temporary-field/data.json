@@ -1,0 +1,25 @@
+{
+  "id": "temporary-field",
+  "name": "Temporary Field",
+  "description": "A code smell where class fields are only used under certain circumstances and remain unused or empty the rest of the time. These fields often serve a purpose only within a specific algorithm or state.",
+  "cppExamples": [],
+  "refactoringTechniques": [
+    {
+      "name": "Extract Class",
+      "description": "Move the temporary fields and the code that uses them into a separate class that's used only when needed."
+    },
+    {
+      "name": "Introduce Null Object",
+      "description": "Replace the check for a null field with a null object that provides the appropriate default behavior."
+    },
+    {
+      "name": "Replace Method with Method Object",
+      "description": "Move the entire method and its local variables into a separate class, making the temporary fields instance variables of the new class."
+    },
+    {
+      "name": "Extract Method",
+      "description": "Extract the code that uses the temporary fields into separate methods that receive the necessary data as parameters."
+    }
+  ],
+  "relatedSmells": ["feature-envy", "data-clumps", "long-parameter-list"]
+}

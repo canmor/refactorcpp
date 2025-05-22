@@ -1,0 +1,25 @@
+{
+  "id": "alternative-interfaces",
+  "name": "Alternative Classes with Different Interfaces",
+  "description": "Two classes that perform identical functions but have different method names, resulting in unnecessary duplication and complexity.",
+  "cppExamples": [],
+  "refactoringTechniques": [
+    {
+      "name": "Extract Interface",
+      "description": "Create a common interface that both classes can implement to standardize method signatures."
+    },
+    {
+      "name": "Rename Methods",
+      "description": "Rename methods in one class to match the other class's naming convention."
+    },
+    {
+      "name": "Move Method",
+      "description": "Move unique functionality from one class to the other to consolidate similar functionality."
+    },
+    {
+      "name": "Merge Classes",
+      "description": "If the classes are truly identical in purpose, merge them into a single class."
+    }
+  ],
+  "relatedSmells": ["duplicate-code", "divergent-change"]
+}

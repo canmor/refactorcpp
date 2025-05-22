@@ -1,0 +1,19 @@
+{
+  "id": "alternative-interfaces-quiz-1",
+  "smellId": "alternative-interfaces",
+  "title": "Identifying Code Smells in Authentication Systems",
+  "question": "Review the C++ code snippet below. Which code smell is most prominently exhibited in the relationship between UserAuthenticator and LoginManager classes?",
+  "codeSnippet": {
+    "path": "quizzes/alternative-interfaces-quiz-1/snippet.cpp",
+    "language": "cpp"
+  },
+  "quizType": "multiple-choice",
+  "options": [
+    { "id": "a", "text": "Alternative Classes with Different Interfaces" },
+    { "id": "b", "text": "Duplicate Code" },
+    { "id": "c", "text": "Shotgun Surgery" },
+    { "id": "d", "text": "Parallel Inheritance Hierarchies" }
+  ],
+  "correctAnswer": "a",
+  "explanation": "This code exhibits the 'Alternative Classes with Different Interfaces' code smell. UserAuthenticator and LoginManager perform essentially identical functions but use different method names. UserAuthenticator has validateCredentials(), generateSessionToken(), and checkPermission() methods, while LoginManager has functionally equivalent methods named verifyUser(), createSession(), and hasAccess(). This creates unnecessary duplication and complexity in the codebase. The most appropriate refactoring would be to create a common interface that both classes can implement, or to merge them into a single class with a consistent interface. This smell often occurs when different developers create similar functionality without knowledge of existing implementations."
+}

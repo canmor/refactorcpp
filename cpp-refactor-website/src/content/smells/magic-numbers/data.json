@@ -1,0 +1,28 @@
+{
+  "id": "magic-numbers",
+  "name": "Magic Numbers",
+  "description": "Magic Numbers are unnamed numerical constants that appear in code without explanation. Their meaning is often unclear, making the code harder to understand and maintain. If the number needs to change, it might have to be changed in multiple places, risking inconsistency.",
+  "cppExamples": [
+    {
+      "title": "Before Refactoring: Unnamed Constants",
+      "codePath": "smells/magic-numbers/before.cpp",
+      "explanation": "The code uses numbers like `3.14159`, `10`, `0.05` directly in calculations. Without context, it's hard to know what these numbers represent (e.g., Pi, max items, tax rate)."
+    },
+    {
+      "title": "After Refactoring: Named Constants",
+      "codePath": "smells/magic-numbers/after.cpp",
+      "explanation": "Magic numbers are replaced with named constants (e.g., `PI`, `MAX_ITEMS`, `SALES_TAX_RATE`). This makes the code self-documenting and easier to modify if these values need to change."
+    }
+  ],
+  "refactoringTechniques": [
+    {
+      "name": "Replace Magic Number with Symbolic Constant",
+      "description": "Define a constant with a meaningful name and use it instead of the raw number. In C++, this can be done using `const`, `constexpr`, or `#define` (though `const`/`constexpr` are generally preferred)."
+    },
+    {
+      "name": "Use Enums for Related Sets of Constants",
+      "description": "If a set of related numbers represents specific states or types (e.g., error codes, item types), use an `enum` or `enum class`."
+    }
+  ],
+  "relatedSmells": ["unclear-naming", "hard-coded-values"]
+}

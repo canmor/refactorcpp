@@ -1,0 +1,19 @@
+{
+  "id": "long-method-quiz-1",
+  "smellId": "long-method",
+  "title": "Identifying a Long Method",
+  "question": "Review the C++ code snippet below. Which of the following statements best indicates that it might be suffering from the 'Long Method' code smell?",
+  "codeSnippet": {
+    "path": "quizzes/long-method-quiz-1/snippet.cpp",
+    "language": "cpp"
+  },
+  "quizType": "multiple-choice",
+  "options": [
+    { "id": "a", "text": "The code uses complex mathematical calculations." },
+    { "id": "b", "text": "The function is responsible for multiple distinct tasks (e.g., calculation, logging, data transformation)." },
+    { "id": "c", "text": "The code includes comments explaining different sections." },
+    { "id": "d", "text": "The function takes several parameters." }
+  ],
+  "correctAnswer": "b",
+  "explanation": "A 'Long Method' often tries to do too many things. While parameter count or comments can be factors, the primary indicator is when a single function handles multiple unrelated responsibilities. Complex calculations alone don't make a method 'long' if it's a single, cohesive task."
+}

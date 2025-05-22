@@ -1,0 +1,32 @@
+{
+  "id": "god-object",
+  "name": "God Object",
+  "description": "A God Object is a class that knows or does too much. It centralizes too much responsibility, leading to a complex, tightly coupled system that is hard to maintain and understand. This often violates the Single Responsibility Principle and the principle of Separation of Concerns.",
+  "cppExamples": [
+    {
+      "title": "Before Refactoring: Monolithic System Class",
+      "codePath": "smells/god-object/before.cpp",
+      "explanation": "The `SmartHomeSystem` class manages user authentication, device control (lights, thermostat, security), and scheduling. Any change to one aspect (e.g., adding a new device type) requires modifying this large class, increasing risk and complexity."
+    },
+    {
+      "title": "After Refactoring: Delegated Responsibilities",
+      "codePath": "smells/god-object/after.cpp",
+      "explanation": "Responsibilities are delegated to specialized classes: `UserManager`, `LightManager`, `ThermostatManager`, `SecurityManager`, and `Scheduler`. The `SmartHomeSystem` now acts as a coordinator, simplifying its role and making the system more modular."
+    }
+  ],
+  "refactoringTechniques": [
+    {
+      "name": "Extract Class",
+      "description": "Identify distinct responsibilities within the God Object and move them into separate classes. This is the primary method for breaking down a God Object."
+    },
+    {
+      "name": "Delegate Responsibility",
+      "description": "Modify the God Object to delegate tasks to the new, smaller classes it now collaborates with."
+    },
+    {
+      "name": "Identify and Separate Concerns",
+      "description": "Analyze the God Object to find different areas of concern (e.g., user management, data processing, UI handling) and separate them into their own modules or classes."
+    }
+  ],
+  "relatedSmells": ["large-class", "long-method", "feature-envy"]
+}

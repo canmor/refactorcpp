@@ -1,0 +1,32 @@
+{
+  "id": "long-method",
+  "name": "Long Method",
+  "description": "A method, function, or procedure that has grown too long, making it difficult to understand, maintain, and test. It often indicates that the method is trying to do too many things.",
+  "cppExamples": [
+    {
+      "title": "Before Refactoring: Single Overloaded Function",
+      "codePath": "smells/long-method/before.cpp",
+      "explanation": "This `processOrder` function handles subtotal calculation, discount application, tax calculation, and logging all in one place. As more features are added (e.g. payment processing, inventory updates), it would grow even longer and more complex."
+    },
+    {
+      "title": "After Refactoring: Extracted Helper Functions",
+      "codePath": "smells/long-method/after.cpp",
+      "explanation": "The original `processOrder` function is broken down into smaller, more manageable helper functions, each responsible for a single task. This improves readability and maintainability."
+    }
+  ],
+  "refactoringTechniques": [
+    {
+      "name": "Extract Method",
+      "description": "Turn a fragment of code into its own method/function. Name the new method after its purpose. This is the primary technique for shortening long methods."
+    },
+    {
+      "name": "Replace Temp with Query",
+      "description": "If temporary variables are used to store the result of expressions, extract these expressions into their own methods."
+    },
+    {
+      "name": "Decompose Conditional",
+      "description": "Extract complex conditional logic into separate methods."
+    }
+  ],
+  "relatedSmells": ["large-class", "god-object"]
+}

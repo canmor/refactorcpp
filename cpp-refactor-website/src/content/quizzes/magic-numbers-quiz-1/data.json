@@ -1,0 +1,19 @@
+{
+  "id": "magic-numbers-quiz-1",
+  "smellId": "magic-numbers",
+  "title": "Understanding Magic Numbers",
+  "question": "In the C++ snippet below, what does the number `86400` most likely represent in the context of calculating daily resource consumption?",
+  "codeSnippet": {
+    "path": "quizzes/magic-numbers-quiz-1/snippet.cpp",
+    "language": "cpp"
+  },
+  "quizType": "multiple-choice",
+  "options": [
+    { "id": "a", "text": "The maximum capacity of a resource container." },
+    { "id": "b", "text": "The number of seconds in a day." },
+    { "id": "c", "text": "A user ID or a specific account number." },
+    { "id": "d", "text": "The efficiency rating of a resource processing unit." }
+  ],
+  "correctAnswer": "b",
+  "explanation": "The number 86400 is the result of 24 (hours) * 60 (minutes) * 60 (seconds), representing the total number of seconds in a day. Using it directly in code without a named constant is an example of a Magic Number, as its meaning isn't immediately obvious from the number itself."
+}

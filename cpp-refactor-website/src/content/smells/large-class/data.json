@@ -1,0 +1,17 @@
+{
+  "id": "large-class",
+  "name": "Large Class",
+  "description": "A class that has too many instance variables, methods, or lines of code. It often tries to do too much and violates the Single Responsibility Principle.",
+  "cppExamples": [],
+  "refactoringTechniques": [
+    {
+      "name": "Extract Class",
+      "description": "Move some responsibilities and related data to a new class."
+    },
+    {
+      "name": "Extract Subclass/Superclass",
+      "description": "If parts of the class can be grouped by specific criteria or behavior."
+    }
+  ],
+  "relatedSmells": ["long-method", "god-object"]
+}

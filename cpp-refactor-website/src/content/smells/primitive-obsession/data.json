@@ -1,0 +1,25 @@
+{
+  "id": "primitive-obsession",
+  "name": "Primitive Obsession",
+  "description": "Using primitive types instead of small objects for simple tasks, such as currency, ranges, or special strings. Also includes using constants for coding information or string constants as field names for data arrays.",
+  "cppExamples": [],
+  "refactoringTechniques": [
+    {
+      "name": "Replace Data Value with Object",
+      "description": "Create a class for a primitive field that has its own behavior and data."
+    },
+    {
+      "name": "Replace Type Code with Class",
+      "description": "Replace a numeric type code with a class that has static properties representing each value."
+    },
+    {
+      "name": "Replace Type Code with Subclasses",
+      "description": "Create subclasses for each value of the coded type."
+    },
+    {
+      "name": "Replace Array with Object",
+      "description": "Replace an array with an object that has a separate field for each element."
+    }
+  ],
+  "relatedSmells": ["large-class", "long-method", "data-clumps"]
+}

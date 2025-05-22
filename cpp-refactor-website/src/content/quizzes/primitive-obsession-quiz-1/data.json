@@ -1,0 +1,19 @@
+{
+  "id": "primitive-obsession-quiz-1",
+  "smellId": "primitive-obsession",
+  "title": "Identifying Primitive Obsession",
+  "question": "Examine the code snippet below. Which of the following is NOT an example of the Primitive Obsession code smell in this ProductSystem class?",
+  "codeSnippet": {
+    "path": "quizzes/primitive-obsession-quiz-1/snippet.cpp",
+    "language": "cpp"
+  },
+  "quizType": "multiple-choice",
+  "options": [
+    { "id": "a", "text": "Using integer constants (like CATEGORY_ELECTRONICS = 1) to represent product categories instead of creating a proper type." },
+    { "id": "b", "text": "Storing product data as string values in a map using string constants as keys instead of creating a Product class." },
+    { "id": "c", "text": "Using a basic double type for price calculations instead of a Money class that would properly handle currency." },
+    { "id": "d", "text": "Using std::cout to display product information in the console." }
+  ],
+  "correctAnswer": "d",
+  "explanation": "Using std::cout for output is not an example of Primitive Obsession. The other options are classic examples of this smell: using integer constants instead of enums or proper types for categories (option A), using maps with string keys instead of a proper Product class (option B), and using primitive doubles for money calculations instead of a dedicated Money class that would handle currency formatting and rounding appropriately (option C). Primitive Obsession occurs when we use primitive data types to represent domain concepts that would be better modeled as custom types."
+}

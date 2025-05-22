@@ -1,0 +1,19 @@
+{
+  "id": "long-parameter-list-quiz-1",
+  "smellId": "long-parameter-list",
+  "title": "Identifying Code Smells in Report Generation",
+  "question": "Review the C++ code snippet below. Which code smell is most prominently exhibited in this ReportGenerator class?",
+  "codeSnippet": {
+    "path": "quizzes/long-parameter-list-quiz-1/snippet.cpp",
+    "language": "cpp"
+  },
+  "quizType": "multiple-choice",
+  "options": [
+    { "id": "a", "text": "Primitive Obsession" },
+    { "id": "b", "text": "Long Parameter List" },
+    { "id": "c", "text": "Duplicated Code" },
+    { "id": "d", "text": "Feature Envy" }
+  ],
+  "correctAnswer": "b",
+  "explanation": "The ReportGenerator class exhibits a clear case of the 'Long Parameter List' code smell. The generateSalesReport method takes 15 parameters, which is far more than the recommended 3-4 parameters. This makes the method signature difficult to understand, hard to call correctly, and challenging to maintain. To fix this smell, we could use techniques like 'Introduce Parameter Object' to group related parameters, 'Preserve Whole Object' to pass complete objects instead of their individual attributes, or 'Replace Parameter with Method' if some parameters can be obtained internally."
+}

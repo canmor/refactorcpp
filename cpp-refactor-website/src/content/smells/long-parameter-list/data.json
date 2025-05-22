@@ -1,0 +1,25 @@
+{
+  "id": "long-parameter-list",
+  "name": "Long Parameter List",
+  "description": "A method that accepts more than three or four parameters, making it hard to understand, use, and maintain.",
+  "cppExamples": [],
+  "refactoringTechniques": [
+    {
+      "name": "Introduce Parameter Object",
+      "description": "Group parameters that naturally belong together into a single object."
+    },
+    {
+      "name": "Preserve Whole Object",
+      "description": "Instead of passing several values from an object as separate parameters, pass the entire object."
+    },
+    {
+      "name": "Replace Parameter with Method Call",
+      "description": "If a parameter can be obtained by calling a method, replace the parameter with the method call."
+    },
+    {
+      "name": "Use Builder Pattern",
+      "description": "For complex object creation with many optional parameters."
+    }
+  ],
+  "relatedSmells": ["primitive-obsession", "data-clumps"]
+}

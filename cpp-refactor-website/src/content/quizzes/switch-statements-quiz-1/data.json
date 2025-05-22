@@ -1,0 +1,19 @@
+{
+  "id": "switch-statements-quiz-1",
+  "smellId": "switch-statements",
+  "title": "Identifying Code Smells in Shape Processing",
+  "question": "Review the C++ code snippet below. Which code smell is most prominently exhibited in this Shape processing system?",
+  "codeSnippet": {
+    "path": "quizzes/switch-statements-quiz-1/snippet.cpp",
+    "language": "cpp"
+  },
+  "quizType": "multiple-choice",
+  "options": [
+    { "id": "a", "text": "Switch Statements" },
+    { "id": "b", "text": "Feature Envy" },
+    { "id": "c", "text": "Primitive Obsession" },
+    { "id": "d", "text": "Shotgun Surgery" }
+  ],
+  "correctAnswer": "a",
+  "explanation": "The code exhibits a classic 'Switch Statements' smell. The same enum-based switch structure is repeated in multiple places (calculateArea, calculatePerimeter, draw, renderShape, exportToSVG), all switching on the same ShapeType enum. Each time a new shape is added, every switch statement would need to be updated, leading to scattered changes throughout the codebase. This violates the Open-Closed Principle, as the code isn't open for extension without requiring modification. The proper refactoring would be to use polymorphism by creating a base Shape class with virtual methods, and implementing concrete subclasses for each shape type. This way, adding a new shape only requires adding a new class without modifying existing code."
+}

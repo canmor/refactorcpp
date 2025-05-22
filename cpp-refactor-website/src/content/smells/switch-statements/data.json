@@ -1,0 +1,25 @@
+{
+  "id": "switch-statements",
+  "name": "Switch Statements",
+  "description": "A code smell characterized by complex switch operators or sequences of if statements that need to be duplicated across the codebase. When new conditions are added, all instances of the switch logic need to be found and modified.",
+  "cppExamples": [],
+  "refactoringTechniques": [
+    {
+      "name": "Replace Conditional with Polymorphism",
+      "description": "Create a base class with a virtual method for the conditional behavior, and subclasses that implement specific versions of the behavior."
+    },
+    {
+      "name": "Replace Type Code with Subclasses",
+      "description": "When the conditional is based on a type code, create subclasses for each type instead of using switch statements."
+    },
+    {
+      "name": "Replace Conditional with Strategy",
+      "description": "Extract the conditional logic into a separate strategy class with implementations for each case."
+    },
+    {
+      "name": "Replace Parameter with Explicit Methods",
+      "description": "Create separate methods for each condition instead of a single method that switches on a parameter."
+    }
+  ],
+  "relatedSmells": ["duplicate-code", "large-class", "long-method"]
+}

@@ -1,0 +1,19 @@
+{
+  "id": "large-class-quiz-1",
+  "smellId": "large-class",
+  "title": "Identifying a Large Class",
+  "question": "Review the C++ code snippet below. Which refactoring technique would be most appropriate to address the 'Large Class' smell in the StudentManagementSystem class?",
+  "codeSnippet": {
+    "path": "quizzes/large-class-quiz-1/snippet.cpp",
+    "language": "cpp"
+  },
+  "quizType": "multiple-choice",
+  "options": [
+    { "id": "a", "text": "Replace conditional with polymorphism." },
+    { "id": "b", "text": "Extract Class - separating the student, course, enrollment, and authentication responsibilities into different classes." },
+    { "id": "c", "text": "Inline Method - combining smaller methods into larger ones to reduce the number of methods." },
+    { "id": "d", "text": "Add more comments to explain what each part of the class is doing." }
+  ],
+  "correctAnswer": "b",
+  "explanation": "The StudentManagementSystem class is a classic example of a Large Class code smell. It handles multiple distinct responsibilities: student management, course management, enrollments, authentication, and reporting. The best approach is to Extract Class, creating separate classes for each major responsibility (StudentRegistry, CourseRegistry, EnrollmentManager, AuthenticationService, ReportGenerator). This follows the Single Responsibility Principle, making the code more maintainable and easier to understand."
+}

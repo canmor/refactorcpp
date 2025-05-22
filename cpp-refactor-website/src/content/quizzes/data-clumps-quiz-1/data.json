@@ -1,0 +1,19 @@
+{
+  "id": "data-clumps-quiz-1",
+  "smellId": "data-clumps",
+  "title": "Identifying Code Smells in Order Processing",
+  "question": "Review the C++ code snippet below. Which code smell is most prominently exhibited in this OrderProcessor class?",
+  "codeSnippet": {
+    "path": "quizzes/data-clumps-quiz-1/snippet.cpp",
+    "language": "cpp"
+  },
+  "quizType": "multiple-choice",
+  "options": [
+    { "id": "a", "text": "Long Method" },
+    { "id": "b", "text": "Feature Envy" },
+    { "id": "c", "text": "Data Clumps" },
+    { "id": "d", "text": "Message Chains" }
+  ],
+  "correctAnswer": "c",
+  "explanation": "The OrderProcessor class exhibits a clear case of the 'Data Clumps' code smell. The same groups of data (shipping address fields and billing address fields) appear repeatedly across multiple methods. These repeating groups of variables (street, city, state, zipCode, country) should be extracted into their own classes like ShippingAddress and BillingAddress. This would make the code more maintainable, reduce parameter lists, and better encapsulate related data. The test of whether these are data clumps is to ask if removing one field would make the others meaningless - in this case it would, confirming that these are indeed data clumps."
+}

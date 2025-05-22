@@ -1,0 +1,21 @@
+{
+  "id": "data-clumps",
+  "name": "Data Clumps",
+  "description": "Groups of variables that appear together in multiple places in the code. These repeated groups of variables should be extracted into their own classes.",
+  "cppExamples": [],
+  "refactoringTechniques": [
+    {
+      "name": "Extract Class",
+      "description": "Create a new class to hold the clumped data and provide appropriate access methods."
+    },
+    {
+      "name": "Introduce Parameter Object",
+      "description": "Replace the clump of parameters with a single parameter object."
+    },
+    {
+      "name": "Preserve Whole Object",
+      "description": "Pass the complete object that contains the data clump instead of passing individual fields."
+    }
+  ],
+  "relatedSmells": ["primitive-obsession", "long-parameter-list"]
+}

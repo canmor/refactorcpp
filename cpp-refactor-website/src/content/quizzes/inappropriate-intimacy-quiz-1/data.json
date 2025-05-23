@@ -1,0 +1,15 @@
+{
+  "id": "inappropriate-intimacy-quiz-1",
+  "smellId": "inappropriate-intimacy",
+  "title": "Identifying Inappropriate Intimacy Smell",
+  "question": "Which of the following statements best describes the 'Inappropriate Intimacy' code smell?",
+  "quizType": "multiple-choice",
+  "options": [
+    { "id": "a", "text": "A class refers to a class that contains only fields and crude methods for accessing them (getters and setters)." },
+    { "id": "b", "text": "A variable, parameter, field, method or class is no longer used (usually because it’s obsolete)." },
+    { "id": "c", "text": "One class uses the internal fields and methods of another class excessively." },
+    { "id": "d", "text": "There’s an unused class, method, field or parameter, created “just in case” for features that never get implemented." }
+  ],
+  "correctAnswer": "c",
+  "explanation": "'Inappropriate Intimacy' describes a situation where one class is too coupled with the internal details (fields, methods) of another class. Good object-oriented design aims for loose coupling, where classes know as little as possible about each other's internals, making them easier to maintain and reuse."
+}

@@ -1,0 +1,15 @@
+{
+  "id": "message-chains-quiz-1",
+  "smellId": "message-chains",
+  "title": "Identifying Message Chains Smell",
+  "question": "Which of the following statements best describes the 'Message Chains' code smell?",
+  "quizType": "multiple-choice",
+  "options": [
+    { "id": "a", "text": "A method is filled with explanatory comments because the code is not self-documenting." },
+    { "id": "b", "text": "In code you see a series of calls resembling $a->b()->c()->d()." },
+    { "id": "c", "text": "Two code fragments look almost identical, leading to maintenance issues." },
+    { "id": "d", "text": "A class doesn't do enough to earn your attention and its responsibilities should be moved elsewhere." }
+  ],
+  "correctAnswer": "b",
+  "explanation": "A 'Message Chain' occurs when a client requests an object, that object requests another, which requests yet another, and so on (e.g., `a.getB().getC().doSomething()`). This creates a strong coupling between the client and the structure of the chain, making the code fragile to changes in intermediate relationships."
+}

@@ -1,0 +1,15 @@
+{
+  "id": "comments-quiz-1",
+  "smellId": "comments",
+  "title": "Identifying Comments Smell",
+  "question": "Which of the following statements best describes the 'Comments' code smell?",
+  "quizType": "multiple-choice",
+  "options": [
+    { "id": "a", "text": "A method accesses the data of another object more than its own data." },
+    { "id": "b", "text": "A method is filled with explanatory comments." },
+    { "id": "c", "text": "A variable, parameter, field, method or class is no longer used." },
+    { "id": "d", "text": "In code you see a series of calls resembling $a->b()->c()->d()." }
+  ],
+  "correctAnswer": "b",
+  "explanation": "The 'Comments' code smell suggests that if a method requires many comments to be understood, the code itself is likely unclear and could be improved by refactoring for clarity, such as by using better naming or by breaking down complex parts into smaller, self-explanatory methods."
+}

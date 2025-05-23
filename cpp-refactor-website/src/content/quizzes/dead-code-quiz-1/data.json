@@ -1,0 +1,15 @@
+{
+  "id": "dead-code-quiz-1",
+  "smellId": "dead-code",
+  "title": "Identifying Dead Code Smell",
+  "question": "Which of the following statements best describes the 'Dead Code' code smell?",
+  "quizType": "multiple-choice",
+  "options": [
+    { "id": "a", "text": "A class performs only one action, delegating work to another class." },
+    { "id": "b", "text": "A variable, parameter, field, method or class is no longer used (usually because it’s obsolete)." },
+    { "id": "c", "text": "There’s an unused class, method, field or parameter created 'just in case'." },
+    { "id": "d", "text": "Two code fragments look almost identical." }
+  ],
+  "correctAnswer": "b",
+  "explanation": "'Dead Code' refers to any part of the codebase (like a variable, parameter, method, or even a class) that is no longer used or executed. This often happens as software evolves and requirements change, and old code isn't cleaned up. It adds clutter and can be misleading."
+}

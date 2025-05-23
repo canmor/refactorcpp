@@ -1,0 +1,15 @@
+{
+  "id": "lazy-class-quiz-1",
+  "smellId": "lazy-class",
+  "title": "Identifying Lazy Class Smell",
+  "question": "Which of the following statements best describes the 'Lazy Class' code smell?",
+  "quizType": "multiple-choice",
+  "options": [
+    { "id": "a", "text": "A class was designed to be fully functional but after some refactoring it has become ridiculously small." },
+    { "id": "b", "text": "A class contains only fields and crude methods for accessing them." },
+    { "id": "c", "text": "A variable, parameter, field, method or class is no longer used because it’s obsolete." },
+    { "id": "d", "text": "There’s an unused class, method, field or parameter, created “just in case”." }
+  ],
+  "correctAnswer": "a",
+  "explanation": "A 'Lazy Class' is a class that doesn't do enough useful work to justify its existence. This might be because its responsibilities were moved to other classes during refactoring, or it was designed for features that were never implemented. Such classes add unnecessary complexity and should be eliminated, often by inlining their functionality into another class."
+}

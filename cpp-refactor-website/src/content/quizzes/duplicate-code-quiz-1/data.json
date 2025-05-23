@@ -1,0 +1,15 @@
+{
+  "id": "duplicate-code-quiz-1",
+  "smellId": "duplicate-code",
+  "title": "Identifying Duplicate Code Smell",
+  "question": "Which of the following statements best describes the 'Duplicate Code' smell?",
+  "quizType": "multiple-choice",
+  "options": [
+    { "id": "a", "text": "A class performs only one action, delegating work to another class." },
+    { "id": "b", "text": "Understanding and maintaining a class costs time and money, but it doesn't do enough to earn your attention." },
+    { "id": "c", "text": "Two code fragments look almost identical." },
+    { "id": "d", "text": "A class contains only fields and crude methods for accessing them (getters and setters)." }
+  ],
+  "correctAnswer": "c",
+  "explanation": "The 'Duplicate Code' smell occurs when two or more code fragments are very similar or identical. This is problematic because if a change is needed, it has to be made in all duplicated places, increasing the risk of errors and making maintenance harder."
+}

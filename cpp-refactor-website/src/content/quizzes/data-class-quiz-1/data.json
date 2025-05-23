@@ -1,0 +1,15 @@
+{
+  "id": "data-class-quiz-1",
+  "smellId": "data-class",
+  "title": "Identifying Data Class Smell",
+  "question": "Which of the following statements best describes the 'Data Class' code smell?",
+  "quizType": "multiple-choice",
+  "options": [
+    { "id": "a", "text": "A method accesses the data of another object more than its own data." },
+    { "id": "b", "text": "A class refers to a class that contains only fields and crude methods for accessing them (getters and setters)." },
+    { "id": "c", "text": "One class uses the internal fields and methods of another class." },
+    { "id": "d", "text": "In code you see a series of calls resembling $a->b()->c()->d()." }
+  ],
+  "correctAnswer": "b",
+  "explanation": "A 'Data Class' is a class that primarily holds data and has getters and setters for that data, but lacks significant behavior or operations on its own data. The true power of objects comes from encapsulating data with the operations that manipulate it."
+}

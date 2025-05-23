@@ -1,0 +1,15 @@
+{
+  "id": "parallel-inheritance-hierarchies-quiz-1",
+  "smellId": "parallel-inheritance-hierarchies",
+  "title": "Identifying Parallel Inheritance Hierarchies",
+  "question": "Which of the following statements best describes the 'Parallel Inheritance Hierarchies' code smell?",
+  "quizType": "multiple-choice",
+  "options": [
+    { "id": "a", "text": "Whenever you create a subclass for a class, you find yourself needing to create a subclass for another class." },
+    { "id": "b", "text": "A method is filled with explanatory comments." },
+    { "id": "c", "text": "Two code fragments look almost identical." },
+    { "id": "d", "text": "A class doesn't do enough to earn your attention and should be deleted." }
+  ],
+  "correctAnswer": "a",
+  "explanation": "Parallel Inheritance Hierarchies occur when you have two class hierarchies that mirror each other, and every time you make a change in one, you have to make a corresponding change in the other. This often indicates that the two hierarchies should be merged or redesigned."
+}

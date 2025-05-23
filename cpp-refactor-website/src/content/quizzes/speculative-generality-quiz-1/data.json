@@ -1,0 +1,15 @@
+{
+  "id": "speculative-generality-quiz-1",
+  "smellId": "speculative-generality",
+  "title": "Identifying Speculative Generality Smell",
+  "question": "Which of the following statements best describes the 'Speculative Generality' code smell?",
+  "quizType": "multiple-choice",
+  "options": [
+    { "id": "a", "text": "Whenever you create a subclass for a class, you find yourself needing to create a subclass for another class." },
+    { "id": "b", "text": "A method is filled with explanatory comments, suggesting the code is not clear on its own." },
+    { "id": "c", "text": "There’s an unused class, method, field or parameter, created “just in case” to support anticipated future features that never get implemented." },
+    { "id": "d", "text": "A class doesn't do enough to earn your attention and should be deleted because its functionality is minimal or unused." }
+  ],
+  "correctAnswer": "c",
+  "explanation": "'Speculative Generality' refers to creating code (classes, methods, fields, parameters) that isn't needed for current requirements but is built in anticipation of future needs. This often leads to overly complex and hard-to-maintain code if those future needs never materialize."
+}

@@ -1,0 +1,15 @@
+{
+  "id": "feature-envy-quiz-1",
+  "smellId": "feature-envy",
+  "title": "Identifying Feature Envy Smell",
+  "question": "Which of the following statements best describes the 'Feature Envy' code smell?",
+  "quizType": "multiple-choice",
+  "options": [
+    { "id": "a", "text": "A method accesses the data of another object more than its own data." },
+    { "id": "b", "text": "One class uses the internal fields and methods of another class." },
+    { "id": "c", "text": "In code you see a series of calls resembling $a->b()->c()->d()." },
+    { "id": "d", "text": "A class performs only one action, delegating work to another class, making its own existence questionable." }
+  ],
+  "correctAnswer": "a",
+  "explanation": "'Feature Envy' occurs when a method in one class seems more interested in the data of another class than its own. This often means the method is in the wrong class and should be moved closer to the data it manipulates."
+}
